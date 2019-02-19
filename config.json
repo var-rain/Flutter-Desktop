@@ -1,0 +1,12 @@
+{
+  "WIDTH": 480,
+  "HEIGHT": 800,
+  "RATIO": 1.0,
+  "ICON": "assets/icon.png",
+  "FLUTTER": "build/flutter_assets",
+  "ICU": "icudtl.dat",
+  "ARGS": [
+    "--dart-non-checked-mode",
+    "--observatory-port=50300"
+  ]
+}
