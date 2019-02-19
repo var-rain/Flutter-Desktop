@@ -46,19 +46,12 @@ void main() {
 ### Configuration File
 ```json
 {
-    // Window default width.
     "WIDTH": 480,
-    // Window default height.
     "HEIGHT": 800,
-    // Pixel ratio.
     "RATIO": 1.0,
-    // ICON image path.
     "ICON": "assets/icon.png",
-    // Flutter assets path.
     "FLUTTER": "build/flutter_assets",
-    // icudtl.dat file path.
     "ICU": "icudtl.dat",
-    // VM args.
     "ARGS": [
         "--dart-non-checked-mode",
         "--observatory-port=50300"
