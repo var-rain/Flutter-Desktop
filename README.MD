@@ -30,21 +30,6 @@ void main() {
 
 - Run **launcher.exe**.
 - Run with Visual Studio Code.
-```json
-{
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "Flutter",
-            "request": "attach",
-            "deviceId": "flutter-tester",
-            "observatoryUri": "http://127.0.0.1:50300/",
-            "type": "dart"
-        }
-    ]
-}
-```
-- Click Visual Studio Code Run button to enable hot reload.
 ### Configuration File
 ```json
 {
