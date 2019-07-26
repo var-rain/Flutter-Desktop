@@ -1,33 +1,35 @@
 ## Flutter Desktop
 ### Special thanks
-[Go Flutter desktop embedder](https://github.com/Drakirus/go-flutter-desktop-embedder)
+[go-flutter](https://github.com/go-flutter-desktop/go-flutter)
 ### Screenshot
 ![hot_reload](screenshot/Screenshot_0.gif)
 ![hot_reload](screenshot/Screenshot_1.gif)
 ### Feature
 - Support Hot Reload. (Test Only Visual Studio Code)
-- Support Windows and Linux and Mac OS. ([Go Flutter desktop embedder](https://github.com/Drakirus/go-flutter-desktop-embedder))
+- Support Windows and Linux and Mac OS. ([go-flutter](https://github.com/go-flutter-desktop/go-flutter))
 - Support window title.
 - Support Text input.
 - Support Clipboard. (through shortcuts and UI)
 - Support Configuration file.
 - More...
 ### Deploy
-- Clone this project.
+- Download release version.
+- Extract the file to your path.
 - Edit main method.
+- Edit config.json.
 ```dart
 import 'package:flutter/foundation.dart'
     show debugDefaultTargetPlatformOverride;
 
 void main() {
     // must
-    debugDefaultTargetPlatformOverride = TargetPlatform.android;
+    debugDefaultTargetPlatformOverride = TargetPlatform.fuchsia;
     runApp(MyApp());
 }
 ```
-- Copy **assets**, **flutter_engine.dll**, **config.json**, **icudtl.dat**, **launcher.exe**, **run.bat** to flutter project dirctory. if you will be run as Linux or Mac OS, you can to [build target platform](https://github.com/Drakirus/go-flutter-desktop-embedder/blob/master/README.md).
-- Run **run.bat**.
-- Configuration Visual Studio Code Run configuration (launch.json).
+
+- Run **launcher.exe**.
+- Run with Visual Studio Code.
 ```json
 {
     "version": "0.2.0",
@@ -46,15 +48,18 @@ void main() {
 ### Configuration File
 ```json
 {
-    "WIDTH": 480,
-    "HEIGHT": 800,
-    "RATIO": 1.0,
-    "ICON": "assets/icon.png",
-    "FLUTTER": "build/flutter_assets",
-    "ICU": "icudtl.dat",
-    "ARGS": [
-        "--dart-non-checked-mode",
-        "--observatory-port=50300"
-    ]
+  "Width": 480,
+  "Height": 800,
+  "MinWidth": 480,
+  "MinHeight": 800,
+  "MaxWidth": 480,
+  "MaxHeight": 800,
+  "Ratio": 1.0,
+  "Mode": 0,
+  "Project": "example",
+  "ARGS": [
+    "--dart-non-checked-mode",
+    "--observatory-port=50300"
+  ]
 }
 ```
